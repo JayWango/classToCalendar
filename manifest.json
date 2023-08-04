@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Class To Calendar",
+    "version": "1.0",
+    "description": "Convert class information to a calendar event",
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Class to Calendar Extension"
+    },
+    "permissions": [
+        "storage", 
+        "tabs"
+    ]
+}
