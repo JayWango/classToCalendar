@@ -18,13 +18,26 @@
 form {
   margin-top: 10px;
   font-weight: bold;
-  padding-left: 5px;
+  padding: 10px 10px 2px 10px;
+  background-color: #c9bcb7;
+  border-radius: 5px;
 }
 
-#dataField {
+.dataField {
   margin-bottom: 10px;
 }
 
 input {
   margin-left: 3px;
+}
+
+fieldset {
+  border-radius: 3px;
+  text-align: center;
+}
+
+.daysOfWeek {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -10,36 +10,69 @@
   </div>
 
   <form>
-    <div id="dataField">
+    <div class="dataField">
       <label for="class-name">Class Name: </label>
       <input type="text" id="class-name"/>
       <br>
     </div>
     
-    <div id="dataField">
+    <div class="dataField">
       <label for="location">Location: </label>
       <input type="text" id="location"/>
       <br>
     </div>
 
-    <div id="dataField">
-      <label for="Room">Room: </label>
+    <div class="dataField">
+      <label for="room">Room: </label>
       <input type="text" id="Room"/>
       <br>
     </div>
 
-    <div id="dataField">
+    <div class="dataField">
       <label for="start-date">Start Date: </label>
       <input type="date" id="start-date"/>
       <br>
     </div>
 
-    <div id="dataField">
+    <div class="dataField">
       <label for="end-date">End Date: </label>
       <input type="date" id="end-date"/>
       <br>
     </div>
 
-  </form>
+    <div class="dataField">
+      <fieldset>
+        <legend>Repeats On:</legend>
 
+        <div class="daysOfWeek">
+          <span>
+            <label for="monday">M</label>
+            <input type="checkbox" id="monday"/>
+          </span>
+          
+          <span>
+            <label for="tuesday">T</label>
+            <input type="checkbox" id="tuesday"/>
+          </span>
+
+          <span>
+            <label for="wedneday">W</label>
+            <input type="checkbox" id="wedneday"/>
+          </span>
+
+          <!-- "R" stands for "Thursday" in UCSB class schedule -->
+          <span>
+            <label for="thursday">R</label>
+            <input type="checkbox" id="thursday"/>
+          </span>
+
+          <span>
+            <label for="friday">F</label>
+            <input type="checkbox" id="friday"/>
+          </span>
+        </div>
+      </fieldset>
+    </div>
+
+  </form>
 </div>
