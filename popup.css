@@ -1,3 +1,4 @@
+
 .container {
     width: 300px;
     color: #314d3e;
@@ -40,4 +41,29 @@ fieldset {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+}
+
+#formSubmitButton {
+	background: #b1aea3;
+	border: 1px solid #000000;
+  color: #314d3e;
+	border-radius: 10px;
+	text-shadow: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#formSubmitButton:hover {
+	background: #dddddc;
+	color: #314d3e;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	text-shadow: none;
+  font-weight: bold;
+}
+
+#submit {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
