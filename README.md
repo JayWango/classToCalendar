@@ -13,8 +13,13 @@ A Google Chrome extension that allows you to input information about a class, an
 2.
 3.
 4.
-5. Fixed by creating a separate config.js file which contains the API key and Client ID, and exporting/importing those values into background.js. The .gitignore file makes sure that config.js won't be committed on Github
+5. Solution seemed very roundabout, but I created a separate file called "config.js" which just contains a javascript object and exported it. "background.js" imports the object and accesses the API_KEY and CLIENT_ID from there. However, I began to run into a lot of issues with changing the script tag in my HTML file so that its type attribute was "module". Issues related to scope began to appear and I couldn't access certain functions within "background.js", which caused the Google quickstart API buttons to not appear. The roundabout fix was to create "content.js", which manipulates the DOM to create script and button elements and thus avoids any scope issues. 
 
 
 **Future Improvements:**
 1. Responsiveness of pop-up on other devices (can be solved using rem,em, or % instead of px)
+
+
+
+Self Note:
+Google Self-Authorize button not showing up, quick fix is to just remove the import function from background.js and revert the script tag to not contain module

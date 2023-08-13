@@ -1,13 +1,15 @@
-  import config from "./config.js";
-  
   /* exported gapiLoaded */
   /* exported gisLoaded */
   /* exported handleAuthClick */
   /* exported handleSignoutClick */
 
   // TODO(developer): Set to client ID and API key from the Developer Console
-  const CLIENT_ID = config.CLIENT_ID;
+
+  import config from './config.js';
+
+
   const API_KEY = config.API_KEY;
+  const CLIENT_ID = config.CLIENT_ID;
 
   // Discovery doc URL for APIs used by the quickstart
   const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
@@ -26,7 +28,7 @@
   /**
    * Callback after api.js is loaded.
    */
-  function gapiLoaded() {
+  export function gapiLoaded() {
     gapi.load('client', initializeGapiClient);
   }
 
@@ -46,7 +48,7 @@
   /**
    * Callback after Google Identity Services are loaded.
    */
-  function gisLoaded() {
+  export function gisLoaded() {
     tokenClient = google.accounts.oauth2.initTokenClient({
       client_id: CLIENT_ID,
       scope: SCOPES,
@@ -68,7 +70,7 @@
   /**
    *  Sign in the user upon button click.
    */
-  function handleAuthClick() {
+  export function handleAuthClick() {
     tokenClient.callback = async (resp) => {
       if (resp.error !== undefined) {
         throw (resp);
@@ -91,7 +93,7 @@
   /**
    *  Sign out the user upon button click.
    */
-  function handleSignoutClick() {
+  export function handleSignoutClick() {
     const token = gapi.client.getToken();
     if (token !== null) {
       google.accounts.oauth2.revoke(token.access_token);
@@ -135,3 +137,5 @@
         'Events:\n');
     document.getElementById('content').innerText = output;
   };
+
+  
