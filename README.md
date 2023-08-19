@@ -11,7 +11,7 @@ A Google Chrome extension that allows you to input information about a class, an
 
 **Fixes:**
 1. In the JS function addEvent(), you can select the form element using the DOM and do form.reset()
-2.
+2. Fixed with Solution #4 by using Google Identity API
 3.
 4. Ran into issues with using Google API (gapi) because it turns out that with Manifest v3, Google does not allow you to use external javascript files due to their CSP (Content Security Policy). Instead, I had to use the Google Identity API to authenticate users when they press the "schedule" button. All of the necessary information for using the Identity API is found in the manifest file, under "permissions", "oauth2", and "key". 
 
@@ -21,6 +21,7 @@ A Google Chrome extension that allows you to input information about a class, an
 
 5. Solution seemed very roundabout, but I created a separate file called "config.js" which just contains a javascript object and exported it. "background.js" imports the object and accesses the API_KEY and CLIENT_ID from there. However, I began to run into a lot of issues with changing the script tag in my HTML file so that its type attribute was "module". Issues related to scope began to appear and I couldn't access certain functions within "background.js", which caused the Google quickstart API buttons to not appear. The roundabout fix was to create "content.js", which manipulates the DOM to create script and button elements and thus avoids any scope issues. 
 
+6.
 
 **Future Improvements:**
 1. Responsiveness of pop-up on other devices (can be solved using rem,em, or % instead of px)
