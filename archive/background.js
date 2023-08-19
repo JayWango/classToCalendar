@@ -5,8 +5,7 @@
 
   // TODO(developer): Set to client ID and API key from the Developer Console
 
-  import config from './config.js';
-
+  import config from '../config.js';
 
   const API_KEY = config.API_KEY;
   const CLIENT_ID = config.CLIENT_ID;

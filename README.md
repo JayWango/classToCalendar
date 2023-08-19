@@ -7,12 +7,18 @@ A Google Chrome extension that allows you to input information about a class, an
 3. Add in feature that makes an event repeat until end date on certain days of the week
 4. Make page automatically authorize with the API so that user doesn't have to click "authorize"
 5. Accidentally exposed API key in Github commit
+6. Want to be able to save the text in each field when a user closes the extension
 
 **Fixes:**
 1. In the JS function addEvent(), you can select the form element using the DOM and do form.reset()
 2.
 3.
-4.
+4. Ran into issues with using Google API (gapi) because it turns out that with Manifest v3, Google does not allow you to use external javascript files due to their CSP (Content Security Policy). Instead, I had to use the Google Identity API to authenticate users when they press the "schedule" button. All of the necessary information for using the Identity API is found in the manifest file, under "permissions", "oauth2", and "key". 
+
+Basically, using this function: "chrome.identity.getAuthToken {interactive: true}, function(token)" will return an access token that allows you to make calls to Google APIs. For this project, we only get access to the Calendar API becuase it is the only API listed under our "scopes". 
+
+Solution #4 basically makes Solution #5 obsolete since all the code related to initializing the Google API was removed. 
+
 5. Solution seemed very roundabout, but I created a separate file called "config.js" which just contains a javascript object and exported it. "background.js" imports the object and accesses the API_KEY and CLIENT_ID from there. However, I began to run into a lot of issues with changing the script tag in my HTML file so that its type attribute was "module". Issues related to scope began to appear and I couldn't access certain functions within "background.js", which caused the Google quickstart API buttons to not appear. The roundabout fix was to create "content.js", which manipulates the DOM to create script and button elements and thus avoids any scope issues. 
 
 
@@ -20,6 +26,11 @@ A Google Chrome extension that allows you to input information about a class, an
 1. Responsiveness of pop-up on other devices (can be solved using rem,em, or % instead of px)
 
 
+**Resource Log:**
 
-Self Note:
-Google Self-Authorize button not showing up, quick fix is to just remove the import function from background.js and revert the script tag to not contain module
+Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
+    https://stackoverflow.com/questions/65625854/how-to-integrate-gapi-in-chrome-extensions-manifest-v3
+    https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
+    https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
+
+

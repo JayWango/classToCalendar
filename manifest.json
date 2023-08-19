@@ -3,12 +3,18 @@
     "name": "Class To Calendar",
     "version": "1.0",
     "description": "Convert class information to a calendar event",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvFDhZYtORU+ehplnRAOylE2d50UwWArsI5M1HrDa4s29SeuJSs3bLt2F3NTu5BO1hzthGH30BdumKRrm9g6Ny4peSuQCysizK8cPVyApvMxckRgG9TuR8wiUEmL7J/uZRtMJJxr+WjOJ5GId+cnqejJfJW1PnDTi4as2yeePpAeuDqhS8YT6I9R3g6X6vGGyV9afS5DXMSYuiNjmByojfDGXZ4tNNr3uTFm4nqv9hGWafib0/2ti4SQLP1YjsFAvS4gwaKxQOZ+pTeurs1cPF2UdfU1YVzs5z7S+0z8UBeDK/804fnYf+OwmoCbLVX7r2QBkJRW8ThVuGFT8+c3NEwIDAQAB",
+    "oauth2": {
+        "client_id": "238132710092-u43r8ii83j4dkboioifnbodbd1072tdu.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar"
+        ]
+    },
     "action": {
         "default_popup": "popup.html",
         "default_title": "Class to Calendar Extension"
     },
     "permissions": [
-        "storage", 
-        "tabs"
+        "identity"
     ]
 }
