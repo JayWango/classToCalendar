@@ -26,11 +26,12 @@ A Google Chrome extension that allows you to input information about a class, an
 1. Responsiveness of pop-up on other devices (can be solved using rem,em, or % instead of px)
 
 
+
 **Resource Log:**
 
 Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
-    https://stackoverflow.com/questions/65625854/how-to-integrate-gapi-in-chrome-extensions-manifest-v3
-    https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
-    https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
+    1. https://stackoverflow.com/questions/65625854/how-to-integrate-gapi-in-chrome-extensions-manifest-v3
+    2. https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
+    3. https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
 
 
