@@ -36,3 +36,5 @@ Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
 3. https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
 
 
+API Docs:
+1. https://developers.google.com/calendar/api/concepts/events-calendars
