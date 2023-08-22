@@ -25,6 +25,7 @@ A Google Chrome extension that allows you to input information about a class, an
 
 **Future Improvements:**
 1. Responsiveness of pop-up on other devices (can be solved using rem,em, or % instead of px)
+2. Still stuck on bug where using RDATE when creating an event for the calendar API results in the event being one day behind
 
 
 
@@ -35,6 +36,9 @@ Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
 2. https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
 3. https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
 
+Checking if a checkbox is checked:
+1. https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked
 
 **API Docs:**
 1. https://developers.google.com/calendar/api/concepts/events-calendars
+2. https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch

@@ -108,6 +108,7 @@ const addEvent = async (token) => {
 
 window.onload = function() {
     document.querySelector('button').addEventListener('click', function() {
+      //google identity API being used here
       chrome.identity.getAuthToken({interactive: true}, function(token) {
         console.log(`Auth Token: ${token}`);
         addEvent(token);
