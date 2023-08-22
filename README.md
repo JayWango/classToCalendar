@@ -12,7 +12,7 @@ A Google Chrome extension that allows you to input information about a class, an
 **Fixes:**
 1. In the JS function addEvent(), you can select the form element using the DOM and do form.reset()
 2. Fixed with Solution #4 by using Google Identity API
-3.
+3. Currently able to repeat until end date by using the "RRULE options". Now, events can repeat on certain days of the week by checking whether or not a checkbox is checked. There are 5 if-statements to see if a day of the week is checked. If so, we will append the first 2 letters of the day (ex. Monday = "MO") into an empty string. Each day of the week has to be separated by a comma, so after the if-statements, we use the substring() method to remove the last comma in the entire string so that we can correctly format it for the Calendar API. 
 4. Ran into issues with using Google API (gapi) because it turns out that with Manifest v3, Google does not allow you to use external javascript files due to their CSP (Content Security Policy). Instead, I had to use the Google Identity API to authenticate users when they press the "schedule" button. All of the necessary information for using the Identity API is found in the manifest file, under "permissions", "oauth2", and "key". 
 
     Basically, using this function: "chrome.identity.getAuthToken {interactive: true}, function(token)" will return an access token that allows you to make calls to Google APIs. For this project, we only get access to the Calendar API becuase it is the only API listed under our "scopes". 
@@ -36,5 +36,5 @@ Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
 3. https://medium.com/geekculture/googles-oauth2-authorization-with-chrome-extensions-2d50578fc64f
 
 
-API Docs:
+**API Docs:**
 1. https://developers.google.com/calendar/api/concepts/events-calendars

@@ -13,6 +13,34 @@ const addEvent = async (token) => {
     const startTime = new Date(startDate + "," + start).toISOString();
     const endTime = new Date(startDate + "," + end).toISOString();
 
+    const monday = document.getElementById("monday");
+    const tuesday = document.getElementById("tuesday");
+    const wednesday = document.getElementById("wednesday");
+    const thursday = document.getElementById("thursday");
+    const friday = document.getElementById("friday");
+    
+    let daysOfWeek = "";
+    if (monday.checked) {
+      daysOfWeek += "MO,";
+    }
+    if (tuesday.checked) {
+      daysOfWeek += "TU,";
+    }
+    if (wednesday.checked) {
+      daysOfWeek += "WE,";
+    }
+    if (thursday.checked) {
+      daysOfWeek += "TH,";
+    }
+    if (friday.checked) {
+      daysOfWeek += "FR,";
+    }
+
+    //this substr removes the last comma of the string 
+    daysOfWeek = daysOfWeek.substring(0, daysOfWeek.length - 1);
+
+    //console.log(daysOfWeek);
+
     // console.log(`Start Time: ${startTime}`);
     // console.log(`End Time: ${endTime}`);
     // console.log(`End Date: ${endDate}`);
@@ -45,7 +73,7 @@ const addEvent = async (token) => {
         //UNTIL goes in the format of YEAR/MONTH/DAY, ex: 20230925 is 9/25/2023, the recurrence end date is exclusive, not inclusive
         //but, the RDATE parameter should make it inclusive
         //`RDATE;VALUE=DATE:${endDateRecurr}`,
-        `RRULE:FREQ=WEEKLY;UNTIL=${endDateRecurr};BYDAY=MO,TU,FR`
+        `RRULE:FREQ=WEEKLY;UNTIL=${endDateRecurr};BYDAY=${daysOfWeek}`
       ],
       reminders: {
         useDefault: false,
