@@ -29,7 +29,7 @@ A Google Chrome extension that allows you to input information about a class, an
 
 
 
-**Resource Log:**
+# Resources
 
 Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
 1. https://stackoverflow.com/questions/65625854/how-to-integrate-gapi-in-chrome-extensions-manifest-v3
