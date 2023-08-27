@@ -39,6 +39,12 @@ Regarding using Google OAuth 2 to authenticate users for Chrome Extensions:
 Checking if a checkbox is checked:
 1. https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked
 
+What's the purpose of a background.js file?
+1. https://enlight.nyc/projects/build-a-chrome-extension-to-clip-text
+
+
 **API Docs:**
-1. https://developers.google.com/calendar/api/concepts/events-calendars
-2. https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+1. Google Calendar: https://developers.google.com/calendar/api/concepts/events-calendars
+2. JS Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+3. Google Storage: https://developer.chrome.com/docs/extensions/reference/storage/#property-local
+4. Google Runtime: https://developer.chrome.com/docs/extensions/reference/runtime/#method-connect

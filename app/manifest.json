@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Class To Calendar",
-    "version": "0.0.0.1",
+    "version": "2",
     "description": "Convert class information to a calendar event",
     "icons": {
         "16": "assets/calendarIcon16.png",
@@ -21,6 +21,11 @@
         "default_title": "Class to Calendar Extension"
     },
     "permissions": [
-        "identity"
-    ]
+        "identity",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
 }
+

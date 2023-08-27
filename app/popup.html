@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 
 <link href="popup.css" rel="stylesheet" type="text/css" />
-<!-- <script src="./popup.js"></script> -->
-<script type="text/javascript" src="oauth.js"></script>
-<!-- <script type="module" src="./content.js"></script>
-<script type="module" src="./background.js"></script> -->
+<script src="oauth.js"></script>
 
 <div class="container">
   <div>
@@ -59,65 +56,36 @@
         <div class="daysOfWeek">
           <span>
             <label for="monday">M</label>
-            <input type="checkbox" id="monday"/>
+            <input type="checkbox" name="day" id="monday"/>
           </span>
           
           <span>
             <label for="tuesday">T</label>
-            <input type="checkbox" id="tuesday"/>
+            <input type="checkbox" name="day" id="tuesday"/>
           </span>
 
           <span>
             <label for="wedneday">W</label>
-            <input type="checkbox" id="wednesday"/>
+            <input type="checkbox" name="day" id="wednesday"/>
           </span>
 
           <!-- "R" stands for "Thursday" in UCSB class schedule -->
           <span>
             <label for="thursday">R</label>
-            <input type="checkbox" id="thursday"/>
+            <input type="checkbox" name="day" id="thursday"/>
           </span>
 
           <span>
             <label for="friday">F</label>
-            <input type="checkbox" id="friday"/>
+            <input type="checkbox" name="day" id="friday"/>
           </span>
         </div>
       </fieldset>
     </div>
 
     <div id="submit" class="dataField">
-      <button id="formSubmitButton" type="button" onclick="addEvent()">Schedule</button>
+      <button id="formSubmitButton" type="button">Schedule</button>
     </div>
 
   </form>
 </div>
-
-
-
-
-
-
-
-<!-- <head>
-  <title>Google Calendar API Quickstart</title>
-  <meta charset="utf-8" />
-  </head>
-  <body>
-  <p>Google Calendar API Quickstart</p>
-  
-Add buttons to initiate auth sequence and sign out
-  <div id="button-container">
-
-  </div>
-
- Don't need these 2 script tags anymore, because popup.js will use DOM to create them 
-
-<script async defer src="https://apis.google.com/js/api.js"></script>
-  <script async defer src="https://accounts.google.com/gsi/client"></script> 
-  
-  <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-  <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-  
-  <pre id="content" style="white-space: pre-wrap;"></pre>
-  </body> -->
