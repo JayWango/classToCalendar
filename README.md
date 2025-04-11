@@ -1,4 +1,4 @@
-<h2>[Class To Calendar](https://chromewebstore.google.com/detail/class-to-calendar/bbagmljhhoheekljgkbijkhajjegdkfd)</h2>  
+#[Class To Calendar](https://chromewebstore.google.com/detail/class-to-calendar/bbagmljhhoheekljgkbijkhajjegdkfd)
 A Google Chrome extension that allows you to input information about a class, and then automatically add it into your calendar. 
 
 **Issues:**
